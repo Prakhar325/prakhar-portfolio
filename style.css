@@ -60,3 +60,39 @@ body::selection{background:#1aaaff;color:#03101b}
 .navbar nav a:hover::after {
     width: 70%;
 }
+/* About Me layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.about-card {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.education-card {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.beyond-coding-card {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Mobile layout */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card,
+  .education-card,
+  .beyond-coding-card {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
